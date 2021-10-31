@@ -9,8 +9,8 @@ client = commands.Bot(command_prefix=prefix)
 async def verificame(ctx):
   nombre = "Verificado"
   autor = ctx.message.author
-  rol = discord.utils.get(user.guild.roles, name=nombre)
-  await user.add_roles(rol)
+  rol = discord.utils.get(autor.guild.roles, name=nombre)
+  await autor.add_roles(rol)
   await ctx.reply('Fuiste verificado!')
   
 def correrBot():
